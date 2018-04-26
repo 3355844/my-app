@@ -51,6 +51,7 @@ export class AppComponent implements AfterContentInit {
     const y = d3.scaleOrdinal().range([height, 0]);
     const z = d3.scaleOrdinal(d3.schemeCategory10);
     /** Here will be line building  Example: https://bl.ocks.org/mbostock/3884955
-     * here one more example https://bl.ocks.org/mbostock/1166403 */
+     * here one more example https://bl.ocks.org/mbostock/1166403
+     * Here I stop now */
   }
 }
