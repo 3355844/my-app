@@ -1,6 +1,11 @@
+///<reference path="../../../node_modules/@angular/core/src/metadata/directives.d.ts"/>
 import {Component, Input, ChangeDetectorRef, HostListener, ChangeDetectionStrategy, OnInit, AfterViewInit} from '@angular/core';
 import * as d3 from 'd3';
+
 @Component({
+  selector: 'chart',
+  templateUrl: '/chart.component.html',
+  styleUrls: ['./chart.component.css']
 })
 export class ChartComponent implements OnInit, AfterViewInit {
 
