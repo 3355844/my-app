@@ -1,25 +1,38 @@
-///<reference path="../../../node_modules/@angular/core/src/metadata/directives.d.ts"/>
-import {Component, Input, ChangeDetectorRef, HostListener, ChangeDetectionStrategy, OnInit, AfterViewInit} from '@angular/core';
+import {OnInit, Input, Component} from '@angular/core';
 import * as d3 from 'd3';
 
 @Component({
-  selector: 'chart',
-  templateUrl: '/chart.component.html',
+  selector: 'app-chart',
+  templateUrl: './chart.component.html',
   styleUrls: ['./chart.component.css']
 })
-export class ChartComponent implements OnInit, AfterViewInit {
+export class ChartComponent implements OnInit {
+  sometext = 'Here is text from ChartComponent class';
 
   constructor() {
-    /** Here will put data about chart */
-    const MARGIN = {top: 20, right: 80, bottom: 30, left: 50};
-    const WIDTH = 960;
-    const HEIGTH = 500;
   }
 
-  ngOnInit(): void {
-    d3.select('p').text('here is class Chart');
-  }
-
-  ngAfterViewInit(): void {
+  ngOnInit() {
+    /** building chartLine example */
+    const margin = {top: 20, right: 80, bottom: 30, left: 50};
+    const width = 960;
+    const height = 500;
+    const svg = d3.select('p').append('svg');
+    svg.attr('width', width)
+      .attr('height', height);
+    svg.style('border', 'solid 2px');
+    const g = svg.append('g').attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
+    const parseTime = d3.timeParse('%Y%m%d');
+    const x = d3.scaleTime().range([0, width]);
+    const y = d3.scaleOrdinal().range([height, 0]);
+    const z = d3.scaleOrdinal(d3.schemeCategory10);
+    /** Make ChartComponent, import d3
+     *  TODO
+     *1. Make chart Area
+     * 2. Make Line
+     * 3. Read paireChart form JSON
+     * 4. Make Lines with different pairs
+     * 5. Read data from response
+     * */
   }
 }

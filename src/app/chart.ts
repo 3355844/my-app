@@ -1,4 +1,5 @@
 export class Chart {
-  id: number;
+  pairName: string;
   name: any;
+  value: any;
 }
