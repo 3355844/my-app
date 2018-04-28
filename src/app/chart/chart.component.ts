@@ -7,7 +7,7 @@ import * as d3 from 'd3';
   styleUrls: ['./chart.component.css']
 })
 export class ChartComponent implements OnInit {
-  sometext = 'Here is text from ChartComponent class';
+  sometext = 'Here is text from ChartComponent class ';
 
   constructor() {
   }
