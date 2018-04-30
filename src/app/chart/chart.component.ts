@@ -27,6 +27,8 @@ export class ChartComponent implements OnInit {
     let valueLine = d3.line();
     valueLine.x(function (d) {
       return d.year;
+      /** property year does not exist on type [number, number] ... ERROR ...
+       * population is the same ERROR */
     });
     valueLine.y(function (d) {
       return d.population;
