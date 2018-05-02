@@ -1,8 +1,4 @@
-import {AfterContentInit, Component} from '@angular/core';
-import APP_CONFIG from './app.config';
-import {Chart} from './chart';
-
-// import {type} from 'os';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +7,7 @@ import {Chart} from './chart';
 })
 
 export class AppComponent /*implements AfterContentInit*/ {
-  title = 'Wach';
+  title = 'WACh';
 
   constructor() {
   }

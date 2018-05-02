@@ -1,0 +1,12 @@
+h1  {
+  margin-top: 3px;
+  padding-top: 5px;
+  padding-right: 10px;
+  font-size: 50px;
+}
+img {
+  height: 55px;
+  float: left;
+  border-radius: 5px ;
+  margin: 5px;
+}
